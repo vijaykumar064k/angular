@@ -1,0 +1,97 @@
+<div class="container-fluid" style="height:300% !important;position: fixed !important;width: 100% !important"> -->
+  <div class="row" style="height:100% !important;position: fixed !important;width: 100% !important">
+    <div class="col-4 Ellipse-281" >
+      <img src="../../assets/images/belbooks-logo.svg" class="logoimage">
+    </div>
+    <div class="col-8 justify-content-center registerform" style="margin-top:70px;height: 100% !important;">
+      <div class="container-fluid">
+          
+        <br>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-12">
+              <h2>Welcome Back!</h2>
+            <form  method="post" action="" id="login_form" novalidate [formGroup]="loginForm" (ngSubmit)="onClick()">
+              
+              <p>Login to Continue</p>
+              <div class="form-row">
+                <div class="form-group col-md-12 md-form">
+                  <label for="inputEmail4">Email</label>
+                  <div class="input-group mb-3">
+                    <input type="email" class="form-control"  (blur)="loginemail()" formControlName="email" placeholder="Email">
+                    <div class="input-group-append">
+                      <span class="input-group-text"
+                        style="background: transparent; border: 0;border-bottom: 1px solid #b4b4b4;"> <i
+                          class='fa fa-at' style="color:grey"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="inputPassword4">Password</label>
+                  <div class="input-group mb-3">
+
+                    <input type="password" class="form-control"  formControlName="password"  name="password" placeholder="Password">
+                    <div class="input-group-append">
+
+                      <span class="input-group-text"
+                        style="background: transparent; border: 0;border-bottom: 1px solid #b4b4b4;"> <i
+                          class="fa fa-lock"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey=""></div>
+                  <input class="form-control d-none" required data-recaptcha="true" data-error="Please complete the Captcha">
+                  <div class="form-text with-errors"></div>
+               </div>
+
+              </div>
+              
+              <br>
+              <br>
+              <br>
+              <button type="submit"   [disabled]="loginForm.invalid"  class="btn submitbutton">LOGIN</button>
+              
+            </form>
+        
+
+          <br>
+          <br>
+
+          <div class="form-row" style="margin-left:35%;">
+            <label>Need an Account?</label>&nbsp;&nbsp;<a href="#" style="color:#1b3764;">Register Here</a>
+          </div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="backdrop" [ngStyle]="{'display':display}"></div>
+<div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+            <div class="topsec">
+                  <img src="../../../assets/images/ico1.svg">
+               </div>
+        <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">SECRET</h4>
+      </div>
+      <div class="modal-body">
+          <!-- <input id="secretkey"  name="passphrase" placeholder="Enter your secretkey" type="password" required="required"
+         class="form-control here" [(ngModel)]="title1"  >  -->
+         <input id="secretkey"  name="passphrase" placeholder="Enter your secretkey" type="password" required="required"
+         class="form-control here"  [(ngModel)]="title1">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Cancel</button>
+       <button type="button" class="btn btn-default"  (click)="hyperLedgerLogin()" >Submit</button>
+      </div>
+    </div>
+  </div>
+</div>  
+

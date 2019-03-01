@@ -1,0 +1,488 @@
+$green: #43b02a;
+$white: #fff;
+$black: #333333;
+$transparent: transparent;
+$font-color: #555555;
+$notification-width: 525px;
+$notification-small-width: 425px;
+$orange: #ff8200;
+$background-color: #ECF0F1;
+
+button:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+  }
+:host {
+
+.vl {
+    margin-top:9px;
+    border-left: 1px solid $white;
+    height: 41px;
+    margin-left: -5px
+}
+    .navbar {
+        background-color: $green;
+        height: 45px;
+        padding-right: 0px;
+        .navbar-brand {
+            color: $white;
+        }
+        .nav-item > a {
+            color: $white;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
+
+.headertext {
+    color: $white;
+    font-style:bold;
+}
+
+.notificationheader {
+    width: $notification-width;
+    margin-top:-27px;
+}
+.notificationimage {
+    position: relative;
+    text-align: center;
+    color: $white;
+}
+.center-left {
+    position: absolute;
+    top: 5px;
+    left: 16px;
+}
+li {
+    list-style-type: none;
+  }
+
+a:focus {
+    outline:none
+}
+.scroll-container {
+    width: $notification-width;
+    height: 70vh;
+    top:5px;
+}
+.notificationmessage {
+    background-color: $background-color;
+    width: 91%;
+    margin: 5px 0px;
+}
+// /* Full-width input fields */
+// // input[type=text], input[type=password], input[type=number] {
+// //     width: 100%;
+// //     padding: 12px 20px;
+// //     margin: 8px 0;
+// //     display: inline-block;
+// //     border: 1px solid #ccc;
+// //     box-sizing: border-box;
+// // }
+
+/* Set a style for all buttons */
+button {
+    background-color: $green;
+    color: $white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    height:inherit;
+    // width: 100%;
+}
+.notidays {
+    text-align:right;width:20%;position: relative;
+}
+.notimessage {
+    text-align:left;height:100%;line-height:30px;width:70%;
+    padding-left: 8px;
+}
+.bolderfont {
+    font-weight: bolder;
+}
+.font-100 {
+    font-weight: 100;
+}
+.close-icon {
+    font-size:1.3rem;
+    font-weight: 100;
+    cursor: pointer;
+}
+.img-background {
+    background-color:$green;
+    text-align:center;
+    vertical-align: middle;
+    padding-top: 40px;
+}
+.text-background {
+    border-right:3px solid $background-color;
+    text-align:left;
+    vertical-align: middle;
+    padding-top: 40px;
+}
+.info-header {
+    font-size: 58px;
+    font-weight: bolder;
+    color:$green;
+    text-align:center;
+    // margin-top:52px;
+}
+.vertical-center {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 55%;
+}
+.green {
+    color:$green;
+}
+// // .form-control:focus {
+// //     color: #495057;
+// //     background-color: #fff;
+// //     border-color: transparent;
+// //     outline: 0;
+// //     -webkit-box-shadow: none;
+// //     box-shadow: none;
+// // }
+button:hover {
+    opacity: 0.8;
+}
+button:focus {
+    border:none;
+    outline:none;
+}
+li:focus {
+    border:none;
+    outline:none;
+}
+// /* Extra styles for the cancel button */
+// .cancelbtn {
+//     width: auto;
+//     padding: 10px 18px;
+//     background-color: #f44336;
+// }
+
+// /* Center the image and position the close button */
+.imgcontainer {
+    // text-align: center;
+    // margin: 24px 0 12px 0;
+    position: relative;
+}
+
+// img.avatar {
+//     width: 40%;
+//     border-radius: 50%;
+// }
+
+// .container {
+//     padding: 16px;
+// }
+
+// span.psw {
+//     float: right;
+//     padding-top: 16px;
+// }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.terms-condition {
+    font-size: 15px;
+    font-weight: 100;
+}
+.forgot-pass {
+    color: $black;
+    text-align: center;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+// form {
+//     margin: 0px 20px;
+// }
+.textfieldfont {
+    margin: 6% 0px;
+    padding: 0px;
+    font-size: large;
+}
+.action-btn {
+    width:100%;
+    border-radius: 5px;
+    background-color:$orange;
+    font-size: large;
+    font-weight: 600;
+}
+.info-quest {
+text-align: center;
+font-weight: 500;
+font-size: 18px;
+}
+.policy-header {
+    font-size: 25px;
+    font-weight: bolder;
+    color:$black;
+}
+
+.policy-body::before {
+    content: "•";
+    color: $green;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.policy-body {
+    font-size: 20px;
+    font-weight: 500;
+    color:$black;
+    margin:20px 0px;
+}
+.unorder-list {
+    list-style: none;
+    padding: 5px;
+}
+
+.resend{
+    color:$green;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline $green;
+}
+.timer {
+    color:$green;
+    text-align: center;
+    font-size: 12px;
+}
+.header-title {
+    background-color: $green;
+    color:$white;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 8px;
+    text-align: center;
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: $white;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    // border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+// @media screen and (max-width: 1600px) {
+// .modal-content {
+//     background-color: #fefefe;
+//     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    // border: 1px solid #888;
+    // width: 70%; /* Could be more or less, depending on screen size */
+// }
+// }
+
+// /* The Close Button (x) */
+// // .close {
+// //     position: absolute;
+// //     right: 25px;
+// //     top: 0;
+// //     color: #000;
+// //     font-size: 35px;
+// //     font-weight: bold;
+// // }
+
+// // .close:hover,
+// // .close:focus {
+// //     color: red;
+// //     cursor: pointer;
+// // }
+
+// /* Add Zoom Animation */
+// .animate {
+//     -webkit-animation: animatezoom 0.6s;
+//     animation: animatezoom 0.6s
+// }
+
+// @-webkit-keyframes animatezoom {
+//     from {-webkit-transform: scale(0)} 
+//     to {-webkit-transform: scale(1)}
+// }
+    
+// @keyframes animatezoom {
+//     from {transform: scale(0)} 
+//     to {transform: scale(1)}
+// }
+
+// /* Change styles for span and cancel button on extra small screens */
+// @media screen and (max-width: 300px) {
+//     span.psw {
+//        display: block;
+//        float: none;
+//     }
+//     .cancelbtn {
+//        width: 100%;
+//     }
+// }
+
+
+@media screen and (min-width: 992px) {
+    
+.navbar-expand-lg .navbar-nav .dropdown-menu-right {
+    left: auto !important;
+}
+
+.navbar-expand-lg .navbar-nav .list-notification {
+    left: -474px !important;
+    top:63px !important;
+}
+
+.card {
+    border:0px !important;
+}
+.mb-3 {
+    margin-bottom:0px !important;
+}
+.card-body {
+    padding: 0px;
+}
+
+.desktop-show {
+    display: block;
+}
+.desktop-show1 {
+    padding-left: 0px;
+}
+}
+
+
+@media screen and (max-width: 992px) {
+    
+.desktop-show1 {
+    padding-left: 15px;
+    min-width: 100%;
+}
+.desktop-show {
+    display: none;
+}
+.notificationheader {
+    width: $notification-small-width;
+    margin-top:-27px;
+}
+
+.scroll-container {
+    width: $notification-small-width;
+    height: 70vh;
+    top:5px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu-right {
+    left: auto !important;
+}
+
+.navbar-expand-lg .navbar-nav .list-notification {
+    left: -374px !important;
+    top:63px !important;
+}
+.navbar-expand-lg .navbar-nav .list-notification:hover {
+    left: 0px !important;
+    top:63px !important;
+    background-color: $white;
+}
+
+.card {
+    border:0px !important;
+}
+.mb-3 {
+    margin-bottom:0px !important;
+}
+.card-body {
+    padding: 0px;
+}
+}
+
+.footer{
+    color:$black;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+    text-align: center;
+}
+
+// i {
+//     font-size:18px !important;
+// }
+
+
+@media screen and (max-width: 1030px) {
+    // span.psw {
+    //    display: block;
+    //    float: none;
+    // }
+    // .cancelbtn {
+    //    width: 100%;
+    // }
+    i {
+        font-size:19px !important;
+        color: $white !important;
+    }
+}
+
+
+@media screen and (max-width: 530px) {
+    // span.psw {
+    //    display: block;
+    //    float: none;
+    // }
+    // .cancelbtn {
+    //    width: 100%;
+    // }
+    // i {
+    //     font-size:14px !important;
+    // }
+    i {
+        padding-left:2px;
+    }
+    button {
+        margin: 0px;
+        padding:7px 5px;
+        // margin-top: -5px !important;
+    }
+    // .nav-link {
+    //     margin-top:12px
+    // }
+}
+
+.bold-font {
+    font-size: 28px;
+    color: $black;
+    font-weight: 600;
+    // margin-top:24px;
+}
+
+.normal-font {
+    font-size: 24px;
+    color: $black;
+    font-weight: 400;
+    // margin-bottom:24px;
+}
+
+.img-position {
+    height:90px;
+    // margin-top:44px;
+}
+
+::ng-deep .mat-form-field {
+    font-size: 18;
+    margin-top: 10;
+}

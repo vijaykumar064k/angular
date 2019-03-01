@@ -1,0 +1,160 @@
+<div class="container"><br>
+  <br>
+  <ul class="nav nav-tabs mainlist">
+    <li class="nav-item">
+      <a (click)="showpage('initial')" class="nav-link active">CERTIFICATE FIELDS</a>
+    </li>
+    <li class="nav-item">
+      <a (click)="showpage('final')" class="nav-link">MAPPING</a>
+    </li>
+  </ul>
+  <br>
+  <br>
+  <ng-template *ngIf="show;then fields; else mapping"> </ng-template>
+  <ng-template #fields>
+
+ 
+    <div class="col-xl-6 col-lg-6 col-md-6 col-12 left fieldsform" style="margin-left:2%">
+      <!-- <form method="post" action="#"> -->
+          <form method="post" action="" [formGroup]="fieldForm" (ngSubmit)="setfields()">
+
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control"  formControlName="studname" name="name" placeholder="Name" required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" formControlName="enrollment"  name="enrollment no." placeholder="Enrollment no." required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control"  formControlName="degree" name="Degree" placeholder="Degree" required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" formControlName="topic" name="Topic" placeholder="Topic" required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control"  formControlName="year" name="Year" placeholder="Year" required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" formControlName="seal" name="seal" placeholder="Seal Position(default)" required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control"  formCotrolName="sign" name="sign" placeholder="Signature Color" required>
+          </div>
+        </div>
+   
+      <br>
+      <br>
+      <div class="form-group ">
+        <input type="submit" style="left:50%;" class="btn submitbutton" value="Done">
+      </div>
+    </form>
+    </div>
+  </ng-template>
+  <ng-template #mapping>
+    <div class="col-xl-10 col-lg-6 col-md-6 col-12 left fieldsform1" style="margin-left:2%">
+        <div class="form-row">
+<div class="form-group col-md-10">
+          <form method="post" action="" [formGroup]="depForm" (ngSubmit)="setdepartments()">
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <h5>Department Name</h5>
+          <div class="input-group">
+            <input type="text" class="form-control" name="branch"  formControlName="branch" placeholder="Information Technology" required>
+          </div>
+        </div>
+        <div class="form-group  col-md-2">
+            <h5>Levels</h5>
+            <div class="input-group" >
+               <select class="form-control" formControlName="levels" required>
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5</option>
+               <option>6</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br>
+        <h5>Enter Details</h5>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+          <div class="input-group">
+            <input type="text" class="form-control" formControlName="auth1" placeholder="Authorizer1@yopmail.com" required>
+          </div>
+        </div>
+      </div>
+        <br>
+        <div class="form-row">
+
+        <div class="form-group col-md-6">
+          <div class="input-group">
+            <input type="text" class="form-control" formControlName="auth2"  placeholder="Authorizer2@yopmail.com" required>
+          </div>
+        </div>
+        </div>
+        <br>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+          <div class="input-group">
+            <input type="text" class="form-control" formControlName="auth3" name="auth1" placeholder="Authorizer3@yopmail.com" required>
+          </div>
+        </div>
+        
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="form-group ">
+        <input type="submit" class="btn submitbutton" style="left: 35%;" value="Submit" (click)="openModal()">
+    </div>
+      </form>
+    </div>
+      <div class="from-group col-md-2">
+          <h4 style="margin-left: 50%">initiated</h4>
+            <div class="initiatecircle rounded-circle" style="margin-left: 55%">
+            
+            </div><br><br>
+            <p class="rectangle">Level 1 <br>abc@yopmail.com</p>
+            <p class="rectangle">Level 2 <br>abc@yopmail.com</p>
+            <p class="rectangle">Level 3<br>abc@yopmail.com</p>
+            <br><br>
+            <p class="issued blur">ISSUED</p>
+      
+          </div>
+      </div>
+    
+       
+    </div> 
+  </ng-template>
+  
+</div>
+
+
+
+
+<!-- <div class="form-group">
+    <div class="input-group" style="width:150%">
+      <input type="text" class="form-control" placeholder="Information Technology" style="width:66.66666666666667%" required>
+      <select class="form-control" placeholder="Information Technology" style="width:30%;margin-left: 3.3%" required></select>
+    </div>
+  </div> -->

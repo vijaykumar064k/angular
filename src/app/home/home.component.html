@@ -1,0 +1,117 @@
+<!-- <div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<form>
+  <input type="text" id="email" name="email" [(ngModel)]="email"/><br>
+  <button type="button" id="submit" (click)="issue()">Submit</button>
+</form> -->
+<div>
+  <header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <img src="../../assets/img/belbooks-logo.svg">
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+      
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a [routerLink]="['/login']" [routerLinkActive]="['router-link-active']" >Login</a></li>
+          <li><a [routerLink]="['/register']" [routerLinkActive]="['router-link-active']" style="color:#f87d42;text-decoration: none;">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>
+  <section class="bel_dashboard_sec1">
+      <div class="container-fluid">
+          <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12 nopadding ">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12 nopadding landing-page">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-12 nopadding landing-banner-2">
+          <img src="../../assets/img/CertificateBannerIllus.jpg">
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-12 nopadding landing-banner-1">
+            <div class="landing-banner-text">
+              <h1 id ='titleroll' style="display:inline-block">&nbsp;</h1>
+              <p>Weather you are an expert or a beginner. Belbooks is going to become the first platform which will faster all your needs in a simple, easy and intuitive way</p>
+              
+                  <div class="input-group mb-3">
+                      <input type="text" class="form-control" id="email" name="email" [(ngModel)]="email" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" (click)="checkExists()">Button</button>
+                      </div>
+                    </div>                                                                                             
+               </div>
+               <h6 style="padding-bottom:0px;padding-top: 0px; text-align:left; color:red" id="p1"></h6>
+               <h5>Already using BelBooks? <a href="#" style="color:#f87d42;text-decoration: none;"> Sign in </a></h5>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+          </div>
+        </section>
+      </div>
+  
+  
+  <script>
+  let text1=['Decentralized','Digital Certification'];
+  var i=0;
+  var doit=true;
+  var interval;
+  var interval2;
+  var scrollElement = document.getElementById('titleroll');
+  function printit(printedText){
+  console.log('came');
+  var size=0;
+  function close(){
+   clearInterval(interval);
+  }
+  interval = setInterval(()=>{
+   if(doit){
+   if(size== printedText.length){
+     doit = false;
+     interval2 = setInterval(()=>{
+       if(scrollElement.innerText.length!=1){
+         scrollElement.innerText = scrollElement.innerText.slice(0,-1);
+       }else{
+         doit=true;
+         caller();
+         close();
+         close1();
+         return;
+       }
+       function close1(){
+         clearInterval(interval2);
+       }
+     }
+       ,200);
+   }else{
+     scrollElement.innerText += printedText[size];
+   }
+   size+=1;
+  }
+  },200);
+  }
+  function caller(){
+  setTimeout(()=>{
+  if(i==text1.length){
+  i=0;
+  }
+  printit(text1[i]);
+  i+=1;
+  
+  },200);
+  
+  }
+  caller();
+  </script>

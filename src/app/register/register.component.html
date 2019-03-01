@@ -1,0 +1,118 @@
+<div class="container-fluid" style="height:300% !important;position: fixed !important;width: 100% !important">
+    <div class="row" style="height:100% !important;position: fixed !important;width: 100% !important">
+      <div class="col-4 Ellipse-281" >
+      </div>
+      <div class="col-8 justify-content-center registerform" style="margin-top:70px;height: 100% !important;">
+        <div class="container">
+          <br>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-10">
+              <form class="form-horizontal" [formGroup]="regForm" (ngSubmit)="onClick1()">
+                <h5>WELCOME!</h5><br>
+                <div class="form-row">
+                  <div class="form-group col-md-6 md-form">
+                    <label for="inputEmail4">University name</label>
+                    <div class="input-group mb-3">
+                      <input type="email" class="form-control" formControlName="companyname"  placeholder="Email">
+                      <div class="input-group-append">
+                        <span class="input-group-text"
+                          style="background: transparent; border: 0;border-bottom: 1px solid #b4b4b4;"> <i
+                            class='fas fa-graduation-cap' style="color:grey"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Username</label>
+                    <div class="input-group mb-3">
+  
+                      <input type="password" class="form-control" formControlName="Username"  placeholder="Password">
+                      <div class="input-group-append">
+  
+                        <span class="input-group-text"
+                          style="background: transparent; border: 0;border-bottom: 1px solid #b4b4b4;"> <i
+                            class="fa fa-user"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6 md-form">
+                    <label for="inputEmail4">Admin Emailid</label>
+                    <div class="input-group mb-3">
+                      <input type="email" class="form-control" formControlName="AdminEmail" placeholder="Email">
+                      <div class="input-group-append">
+                        <span class="input-group-text"
+                          style="background: transparent; border: 0;border-bottom: 1px solid #b4b4b4;"> <i
+                            class="fa fa-at" style="font-size:20px"></i></span>
+                      </div>
+                      <!-- <div class="input-group-append"> 
+                          <span></span>
+                       </div>   -->
+                    </div>
+                  </div>
+                  <!-- <div class="form-group col-md-6">
+                    <label for="inputPassword4">Country</label>
+                    <select class="form-control">
+                      <option>countryname</option>
+                    </select>
+                  </div> -->
+                  <div class="form-group col-md-6">
+                      <label for="inputPassword4">Country</label>
+                    <select id="ide" formControlName="country" class="form-control" (click)="onChangeCountry($event.target.value)">
+                      <option value="">Select country</option>
+                      <option *ngFor="let country of countries" [value]="country.countryName">{{country.countryName}}</option>
+                    </select>
+     
+                 </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Password</label>
+                    <div class="input-group mb-3">
+  
+                      <input type="password" class="form-control" formControlName="Password" placeholder="*********">
+                      <div class="input-group-append">
+  
+                        <span class="input-group-text"
+                          style="background: transparent; border: 0;border-bottom: 1px solid #b4b4b4;"> <i
+                            class="fa fa-lock" style="font-size:20px"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Confirm Password</label>
+                    <div class="input-group mb-3">
+  
+                      <input type="password" class="form-control" formControlName="confirmpassword" placeholder="*********">
+                      <div class="input-group-append">
+  
+                        <span class="input-group-text"
+                          style="background: transparent; border: 0;border-bottom: 1px solid #b4b4b4;"> <i
+                            class="fa fa-lock" style="font-size:20px"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <button type="submit" class="btn submitbutton">REGISTER</button>
+              </form>
+    
+              <br>
+            <br>
+  
+            <div class="form-row" style="margin-left:35%;">
+              <label>Need an Account?</label>&nbsp;&nbsp;<a href="#" style="color:#1b3764;">Register Here</a>
+            </div>
+  
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
